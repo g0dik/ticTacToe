@@ -6,7 +6,9 @@ export default Data = {
         mainMenuStartNet: 'START NET GAME',
         mainMenuWinners: 'LIST OF WINNERS',
         mainMenuSettings: 'SETTING',
-        mainMenuExit: 'EXIT'
+        mainMenuExit: 'EXIT',
+        winListHeaderPlayerName: '-Players-',
+        winListHeaderDateTime: '-Date-time-',
 
     },
 
@@ -17,7 +19,9 @@ export default Data = {
         mainMenuStartNet: 'СЕТЕВАЯ ИГРА',
         mainMenuWinners: 'СПИСОК ПОБЕДИТЕЛЕЙ',
         mainMenuSettings: 'НАСТРОЙКИ',
-        mainMenuExit: 'ВЫХОД'
+        mainMenuExit: 'ВЫХОД',
+        winListHeaderPlayerName: '-Игроки-',
+        winListHeaderDateTime: '-Дата-время-',
     },
 
     UA: {
@@ -27,7 +31,9 @@ export default Data = {
         mainMenuStartNet: 'ГРА В МЕРЕЖІ',
         mainMenuWinners: 'ПЕРЕЛІК ПЕРЕМОЖЦІВ',
         mainMenuSettings: 'НАЛАШТУВАННЯ',
-        mainMenuExit: 'ВИХІД'
+        mainMenuExit: 'ВИХІД',
+        winListHeaderPlayerName: '-Гравці-',
+        winListHeaderDateTime: '-Дата-час-',
     }
 
 }

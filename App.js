@@ -1,3 +1,22 @@
+// Fonts Android
+// normal
+// notoserif
+// sans-serif
+// sans-serif-light
+// sans-serif-thin
+// sans-serif-condensed
+// sans-serif-medium
+// serif
+// Roboto
+// monospace
+
+// git init
+// git add *
+// git commit -m "Name Commit"
+// git status
+// git remote add origin https://github.com/g0dik/ticTacToe.git
+// git push -u origin master
+
 // echo 999999 | sudo tee -a /proc/sys/fs/inotify/max_user_watches && echo 999999 | sudo tee -a /proc/sys/fs/inotify/max_queued_events && echo 999999 | sudo tee -a /proc/sys/fs/inotify/max_user_instances && watchman shutdown-server && sudo sysctl -p
 // cd /media/g0dik/EXCHANGE/ReactNative/ticTacToe/
 // react-native start

@@ -20,7 +20,7 @@ export default function app (state = initialState, action){
             return {...state, showGamesList:action.value };
         case 'SET_TEMP_VALUE': 
             return {...state, temp:action.value }; 
-        case 'GET_LIST_FROM_FIRE_BASE':
+        case 'GET_LIST_FROM_FIRE_BASE':     
             return {...state, listData: action.data }; 
         case 'SET_LANGUAGE':
             return {...state, lang: action.lang}
