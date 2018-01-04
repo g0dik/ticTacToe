@@ -8,7 +8,7 @@ export default class WinnersListView extends Component {
 
     render() {
         const { navigate } = this.props.navigation;
-        const listData = (this.props.winData !== null) 
+        const listData = (this.props.winData !== null)&(this.props.winData !== undefined) 
                             ? (this.props.winData).Games
                             : ({"0000000000123": {firstName: '', secondName: '', date: '', winner: 1}})
         return (
@@ -17,6 +17,8 @@ export default class WinnersListView extends Component {
                     curStyles = {Styles.header}
                     navigation = {this.props.navigation}
                     text = {Data[this.props.lang].mainMenuWinners}
+                    onReset = {this.props.claerList}
+                    reset = {true}
                 />
                 <View style = {Styles.body}>
                     <View style = {Styles.listHeader}>

@@ -3,20 +3,22 @@ import WinnersListView from './winnersListView';
 import {connect} from 'react-redux';
 import { GET_LIST_FROM_FIRE_BASE, 
     SHOW_GAMES_LIST, 
-    SET_TIMER_ENABLED } from '../../actions';
+    SET_TIMER_ENABLE,
+    CLEAR_LIST_FIRE_BASE } from '../../actions';
 import { database } from '../../firebase';
 
 class WinnersList extends Component {
-    componentDidMount() {
-        this.props.onGetListFromFireBase();
+    componentWillMount() {
+        this.props.onGetListFromFireBase('run');
     }
 
     render() {
-        
         return (
             <WinnersListView navigation = {this.props.navigation} 
                             lang = {this.props.app.lang} 
-                            winData = {this.props.app.listData}/>
+                            winData = {this.props.app.listData}
+                            claerList = {this.props.clearListDataBase.bind(this)}
+                            />
         );
     };
 };
@@ -26,16 +28,22 @@ export default connect(
         app: state.app
     }),
     dispatch => ({
-        onGetListFromFireBase: (data) => { 
+        onGetListFromFireBase: (key,data) => { 
             const getList = () =>{
                 return dispatch => {
                     database.ref('/').on('value',(snapshot) => {
-                        data = snapshot.val()
-                        dispatch({ type: GET_LIST_FROM_FIRE_BASE, data})
+                        if (key === 'run') {  
+                            key = '';                   
+                            data = {...snapshot.val()}
+                            dispatch({ type: GET_LIST_FROM_FIRE_BASE, data})
+                        }
                     })
                 }
             }
             dispatch(getList())
+        },
+        clearListDataBase: () => {
+            dispatch({ type: CLEAR_LIST_FIRE_BASE})  
         }
     })
 )(WinnersList)

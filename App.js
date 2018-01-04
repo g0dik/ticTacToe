@@ -22,6 +22,7 @@
 // react-native start
 // /home/g0dik/Android/Sdk/tools/emulator -avd reactnative -qemu -m 2047 -enable-kvm
 // react-native run-android
+<script src="http://localhost:8097"></script>
 
 import React, { Component } from 'react';
 import { Animated, Easing } from 'react-native'

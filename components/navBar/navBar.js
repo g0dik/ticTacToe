@@ -12,6 +12,7 @@ export default class NavBar extends Component {
                 <View style = {Styles.headerLeft}>
                     <TouchableOpacity 
                         onPress={() => {
+                            (this.props.reset === true) ? (this.props.onReset()) : (null)
                             navigate('Home')
                             }}
                     >

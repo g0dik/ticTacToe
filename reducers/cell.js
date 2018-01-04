@@ -7,17 +7,26 @@ const initialState = {
 }
 
 export default function cell (state = initialState, action){
-    if (action.type === SET_CELL_BACKGROUND){
-        var t = [...state.backgroundsValues]
-        t[action.key] = action.bgValue;
-        return Object.assign(state,{ backgroundsValues: t})   
-    } else if (action.type === SET_CELL_CLICK_COUNT) {
-        var l = state.clickCount;
-        l++
-        return Object.assign(state,{ clickCount: l })    
-    } else if (action.type === SET_CLICK_ENABLED) {
-        return Object.assign(state,{ clickEnabled: action.clickEnabled })    
-    }
-    
-    return state
+    switch ( action.type ){
+        case 'SET_CELL_BACKGROUND': { 
+            var temp = [...state.backgroundsValues];
+            t[action.key] = action.bgValue;
+            return {...state, backgroundsValues: t}     
+        };
+        case 'SET_CELL_CLICK_COUNT': {
+            var l = state.clickCount;
+            l++
+            if (action.key === 'clear') {
+                return { ...state, clickCount: 0 } 
+            } else {
+                return { ...state, clickCount: l } 
+            }
+            
+        };
+        case 'SET_CLICK_ENABLED': {
+            return { ...state, clickEnabled: action.clickEnabled }    
+            }
+
+        default: return state;
+    } 
 }

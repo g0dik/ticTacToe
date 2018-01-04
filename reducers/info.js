@@ -1,12 +1,13 @@
 import { CHANGE_INFO_TEXT } from '../actions'
+import Data from '../data/lang'
 
-const initialState = "Game starting..."
+const initialState = ""
 
 export default function info (state = initialState, action){
-    let massOfCellsNames = [
-        'left top corner cell','center top cell','rigth top corner cell', 'left middle cell', 'center middle cell',
-        'rigth middle cell','left bottom corner cell','center bottom cell','rigth bottom corner cell'
-      ],
+    
+    let massOfCellsNames = (Data[action.lang]) ? (Data[action.lang].massOfCellsNames) : ([]),
+        inputX = (Data[action.lang]) ? (Data[action.lang].inputInfoX) : (''),
+        inputY = (Data[action.lang]) ? (Data[action.lang].inputInfoY) : (''),
       temp ='';
 
     if (action.type === CHANGE_INFO_TEXT) {
@@ -14,9 +15,9 @@ export default function info (state = initialState, action){
             return action.text
         } else {
             if (action.text !== 2) {
-                temp = action.playerName + ' input X into ';
+                temp = action.playerName + inputX;
             } else {
-                temp = action.playerName + ' input O into ';
+                temp = action.playerName + inputY;
             }
             temp += massOfCellsNames[action.key];
             return temp; 

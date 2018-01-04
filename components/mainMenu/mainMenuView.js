@@ -65,7 +65,10 @@ export default class MainMenuView extends Component {
                 <View style = {Styles.body}>
                     <TouchableOpacity
                         style={Styles.button}
-                        onPress={() => navigate('StartGame')}> 
+                        onPress={() => {
+                            this.props.onReset('all')
+                            navigate('StartGame')
+                            }}> 
                         <Icon name='play'
                             size={34} 
                             color = 'white'

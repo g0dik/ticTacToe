@@ -9,7 +9,23 @@ export default Data = {
         mainMenuExit: 'EXIT',
         winListHeaderPlayerName: '-Players-',
         winListHeaderDateTime: '-Date-time-',
-
+        gameHeader: 'GAME ON DEVICE',
+        promFirstNameLabel: 'First player name:',
+        promFirstNameDefValue: 'First Player',
+        promSecondNameLabel: 'Second player name:',
+        promSecondNameDefValue: 'Second Player',
+        promError: 'Input player name',
+        reset: 'Restart game',
+        massOfCellsNames: [
+            'left top corner cell', 'center top cell', 'rigth top corner cell', 
+            'left middle cell', 'center middle cell', 'rigth middle cell', 
+            'left bottom corner cell', 'center bottom cell', 'rigth bottom corner cell'
+          ],
+        inputInfoX: ' input X into ',
+        inputInfoY: ' input Y into ',
+        gameStarting: 'Game starting ...',
+        wins: ' wins!',
+        noWins: 'Nobody wins!',
     },
 
     RU: {
@@ -22,6 +38,23 @@ export default Data = {
         mainMenuExit: 'ВЫХОД',
         winListHeaderPlayerName: '-Игроки-',
         winListHeaderDateTime: '-Дата-время-',
+        gameHeader: 'ИГРА НА УСТРОЙСТВЕ',
+        promFirstNameLabel: 'Имя первого игрока:',
+        promFirstNameDefValue: 'Первый Игрок',
+        promSecondNameLabel: 'Имя второго игрока:',
+        promSecondNameDefValue: 'Второк Игрок',
+        promError: 'Введите имя игрока',
+        reset: 'НАЧАТЬ ЗАНОВО',
+        massOfCellsNames: [
+            'левую верхнюю ячейку', 'среднюю верхнюю ячейку', 'правую верхнюю ячейку', 
+            'левую среднюю ячейку', 'центральную среднюю ячейку', 'правую среднюю ячейку', 
+            'левую нижнюю ячейку', 'среднюю нижнюю ячейку', 'правую нижнюю ячейку'
+          ],
+        inputInfoX: ' поставил X в ',
+        inputInfoY: ' поставил Y в ',
+        gameStarting: 'Игра началасть ...',
+        wins: ' выиграл!',
+        noWins: 'Победила дружба!',
     },
 
     UA: {
@@ -34,6 +67,23 @@ export default Data = {
         mainMenuExit: 'ВИХІД',
         winListHeaderPlayerName: '-Гравці-',
         winListHeaderDateTime: '-Дата-час-',
+        gameHeader: 'ГРА НА ПРИСТРОЇ',
+        promFirstNameLabel: 'Ім\'я першого гравця:',
+        promFirstNameDefValue: 'Перший Гравець',
+        promSecondNameLabel: 'Ім\'я другого гравця:',
+        promSecondNameDefValue: 'Другий Гравець',
+        promError: 'Введіть ім\'я гравця',
+        reset: 'РОЗПОЧАТИ ЗНОВУ',
+        massOfCellsNames: [
+            'ліву верхню клітинку', 'середню верхню клітинку', 'праву верхню клітинку', 
+            'ліву середню клітинку', 'центральну середню клітинку', 'праву середню клітинку',
+            'ліву нижню клітинку', 'середню нижню клітинку', 'праву нижню клітинку'
+          ],
+        inputInfoX: ' поставив X в ',
+        inputInfoY: ' поставив Y в ',
+        gameStarting: 'Гра розпочалась ...',
+        wins: ' виграв!',
+        noWins: 'Перемогла дружба!',
     }
 
 }
